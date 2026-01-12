@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "NotebookLM Mind Map Studio",
+  "version": "1.0",
+  "description": "Customize and format NotebookLM mind maps.",
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://notebooklm.google.com/*"
+  ],
+  "icons": {
+    "16": "16.png",
+    "32": "16.png",
+    "48": "16.png",
+    "128": "16.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open Mind Map Studio",
+    "default_icon": {
+      "16": "16.png",
+      "32": "16.png",
+      "48": "16.png",
+      "128": "16.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://notebooklm.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
