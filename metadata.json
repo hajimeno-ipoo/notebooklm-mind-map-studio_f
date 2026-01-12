@@ -1,5 +1,5 @@
 {
   "name": "NotebookLM Mind Map Studio",
-  "description": "A specialized design tool to generate, format, and customize mind maps inspired by NotebookLM. Features AI-powered generation and extensive visual customization options.",
+  "description": "A specialized design tool to format and customize mind maps from NotebookLM. Features extensive visual customization options and export capabilities.",
   "requestFramePermissions": []
 }
